@@ -14,10 +14,11 @@ What's included:
 
 * Servlets / filters and other web.xml goodies.
 * JNDI
+* JSP, JSF, EL (inlcuded, but not tested)
 
 What's NOT included:
 
-* As it happens I care very little about JSP, JSF, EL so those are excluded.
+* As it happens I care very little about
 * No support for EJBs or other heavier JEE stuff.
 * Servlet 3.0 annotation processing.
 * Clean shutdown and hot redeploy (another thing I don't care about in development)

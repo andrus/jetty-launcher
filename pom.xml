@@ -41,6 +41,31 @@
 			<artifactId>jetty-annotations</artifactId>
 			<version>${jetty-version}</version>
 		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty.orbit</groupId>
+			<artifactId>javax.el</artifactId>
+			<version>2.2.0.v201303151357</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty.orbit</groupId>
+			<artifactId>javax.servlet.jsp</artifactId>
+			<version>2.2.0.v201112011158</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty.orbit</groupId>
+			<artifactId>org.apache.jasper.glassfish</artifactId>
+			<version>2.2.2.v201112011158</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-api</artifactId>
+			<version>2.2.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.sun.faces</groupId>
+			<artifactId>jsf-impl</artifactId>
+			<version>2.2.0</version>
+		</dependency>
 	</dependencies>
 
 	<distributionManagement>

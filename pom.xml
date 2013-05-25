@@ -8,6 +8,7 @@
 
 	<description>A launcher that runs a Java web app from a simple "main" method. Primarily intended for Eclipse.</description>
 	<packaging>jar</packaging>
+	<url>https://github.com/andrus/jetty-launcher</url>
 
 	<properties>
 		<jetty-version>8.1.10.v20130312</jetty-version>

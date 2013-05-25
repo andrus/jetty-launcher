@@ -53,7 +53,7 @@ E.g.:
     -Dos.jetty.context=/myapp 
     -Dos.jetty.port=7100
 
-Web application configuration (including setting the context name) can be done via "jetty-web.xml" file that is placed in "WEB-INF/" folder. Read more about the format [here](http://wiki.eclipse.org/Jetty/Reference/jetty-web.xml).
+Web application configuration (including setting the context name) can be done via "jetty-web.xml" file that is placed in "WEB-INF" folder. Read more about the format [here](http://wiki.eclipse.org/Jetty/Reference/jetty-web.xml).
 
-Customizing the rest of the Jetty container (connector, etc.) should probably be done by forking the launcher and creating the desired configuration programmatically. "org.objectstyle.jetty.Launcher" is a small and transparent class and it should be easy to tweak to your liking.
+Customizing the rest of the Jetty container (connector, etc.) should probably be done by forking the launcher and creating a desired configuration programmatically. "org.objectstyle.jetty.Launcher" is a small and transparent class and it should be easy to tweak to your liking.
 

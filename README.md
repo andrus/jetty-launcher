@@ -29,12 +29,14 @@ Usage
 
 * Add dependency on jetty-launcher to your web project, setting the scope as "provided" (i.e. you don't want jetty-laucher.jar end up in your .war during deployment):
 
+```xml
     <dependency>
         <groupId>org.objectstyle</groupId>
         <artifactId>jetty-launcher</artifactId>
         <version>1.1</version>
         <scope>provided</scope>
     </dependency>
+```
 
 * In Eclipse, right-click on your web project and select "Run As > Java Application". Select "org.objectstyle.jetty.Launcher" as your main class and click "Run". Check your app at a URL like http://localhost:8080/mymodulename .
 

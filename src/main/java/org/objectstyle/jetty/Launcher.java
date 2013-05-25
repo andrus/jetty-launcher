@@ -17,6 +17,7 @@ package org.objectstyle.jetty;
 import java.io.File;
 import java.net.MalformedURLException;
 
+import org.eclipse.jetty.server.Connector;
 import org.eclipse.jetty.server.Server;
 import org.eclipse.jetty.server.handler.ContextHandlerCollection;
 import org.eclipse.jetty.server.nio.SelectChannelConnector;
@@ -34,18 +35,13 @@ public class Launcher {
 	}
 
 	void launch() throws Exception {
-		int port = getPort();
 
 		Server server = new Server();
 
-		SelectChannelConnector connector = new SelectChannelConnector();
-		connector.setPort(port);
+		Connector connector = createConnector();
 		server.addConnector(connector);
 
 		WebAppContext context = createContext();
-
-		// this is needed to get stuff from Eclipse project CLASSPATH
-		context.setParentLoaderPriority(true);
 
 		ContextHandlerCollection contexts = new ContextHandlerCollection();
 
@@ -56,6 +52,17 @@ public class Launcher {
 		server.setSendServerVersion(true);
 
 		server.start();
+	}
+
+	private Connector createConnector() {
+		int port = getPort();
+		SelectChannelConnector connector = new SelectChannelConnector();
+		connector.setPort(port);
+
+		// for proper proxy support
+		connector.setForwarded(true);
+
+		return connector;
 	}
 
 	private WebAppContext createContext() throws MalformedURLException {
@@ -82,6 +89,9 @@ public class Launcher {
 				"org.eclipse.jetty.plus.webapp.PlusConfiguration",
 				"org.eclipse.jetty.annotations.AnnotationConfiguration",
 				"org.eclipse.jetty.webapp.JettyWebXmlConfiguration" });
+
+		// this is needed to get stuff from Eclipse project CLASSPATH
+		context.setParentLoaderPriority(true);
 
 		return context;
 	}

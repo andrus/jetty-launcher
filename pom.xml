@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>org.objectstyle</groupId>
+	<artifactId>jetty-launcher</artifactId>
+	<version>0.1-SNAPSHOT</version>
+	<name>jetty-launcher</name>
+
+	<description>A launcher that runs a Java web app from a simple "main" method. Primarily intended for Eclipse.</description>
+	<packaging>jar</packaging>
+
+	<properties>
+		<jetty-version>9.0.3.v20130506</jetty-version>
+	</properties>
+
+	<scm>
+		<connection>scm:git:git@github.com:andrus/jetty-launcher.git</connection>
+		<url>scm:git:git@github.com:andrus/jetty-launcher.git</url>
+		<developerConnection>scm:git:git@github.com:andrus/jetty-launcher.git</developerConnection>
+	</scm>
+
+	<dependencies>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-server</artifactId>
+			<version>${jetty-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-webapp</artifactId>
+			<version>${jetty-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-plus</artifactId>
+			<version>${jetty-version}</version>
+		</dependency>
+		<dependency>
+			<groupId>org.eclipse.jetty</groupId>
+			<artifactId>jetty-annotations</artifactId>
+			<version>${jetty-version}</version>
+		</dependency>
+	</dependencies>
+
+	<distributionManagement>
+		<repository>
+			<id>releases</id>
+			<url>http://maven.objectstyle.org/nexus/content/repositories/releases</url>
+		</repository>
+	</distributionManagement>
+</project>

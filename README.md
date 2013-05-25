@@ -32,7 +32,7 @@ Usage
 
 * Add dependency on jetty-launcher to your web project, setting the scope as "provided" (i.e. you don't want jetty-laucher.jar end up in your .war during deployment).
 
-* In Eclipse, right-click on your web project and select "Run As > Java Application". Select "org.objectstyle.jetty.Launcher" as your main class and click run. Check your app at (http://localhost:8080/mymodulename)[http://localhost:8080/mymodulename].
+* In Eclipse, right-click on your web project and select "Run As > Java Application". Select "org.objectstyle.jetty.Launcher" as your main class and click run. Check your app at a URL like http://localhost:8080/mymodulename .
 
 Customization
 -------------

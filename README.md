@@ -15,16 +15,20 @@ Usage
 
 * Proxy [ObjectStyle Maven Repository](http://maven.objectstyle.org/nexus/content/repositories/releases/) in your own repository manager. Or simply grab jetty-laucher.jar from there and upload it to your repo.
 
-* Add dependency on jetty-launcher to your web project, setting the scope as "provided" (i.e. you don't want jetty-laucher.jar end up in your .war during deployment)
+* Add dependency on jetty-launcher to your web project, setting the scope as "provided" (i.e. you don't want jetty-laucher.jar end up in your .war during deployment).
 
-* In Eclipse, right-click on your web project and select "Run As > Java Application". Select "org.objectstyle.jetty.Launcher" as your main class and click run. Check your app at (http://localhost:8080/)
+* In Eclipse, right-click on your web project and select "Run As > Java Application". Select "org.objectstyle.jetty.Launcher" as your main class and click run. Check your app at (http://localhost:8080/)[http://localhost:8080/].
 
 Customization
 -------------
 
-jetty-launcher supports 2 properties that can be passed on the command line with "-D":
+jetty-launcher supports two properties that can be passed on the command line with "-D":
 
 * os.jetty.context - the name of the webapp context. Default is "/"
 * os.jetty.port - the port to listen on. Default is "8080"
 
-Web application configuration (including the context name) can be done by adding jetty-web.xml file to "WEB-INF/" folder. Read more about the format [here](http://wiki.eclipse.org/Jetty/Reference/jetty-web.xml).
+E.g.:
+
+    -Dos.jetty.context=/myapp -Dos.jetty.port=7100
+
+Web application configuration (including setting the context name) can be done via "jetty-web.xml" file that is placed in "WEB-INF/" folder. Read more about the format [here](http://wiki.eclipse.org/Jetty/Reference/jetty-web.xml).

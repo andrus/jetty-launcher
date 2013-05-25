@@ -70,7 +70,7 @@
 
 	<distributionManagement>
 		<repository>
-			<id>releases</id>
+			<id>objectstyle-org-releases</id>
 			<url>http://maven.objectstyle.org/nexus/content/repositories/releases</url>
 		</repository>
 	</distributionManagement>

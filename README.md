@@ -8,8 +8,7 @@ At the same time the launcher is NOT an Eclipse plugin. It is a simple Java clas
 What's Included
 ---------------
 
-v1.0 is based on Jetty 8 and supports Java 1.6+ and Servlet Spec 3.0.
-
+* Jetty 8 that supports Java 1.6+ and Servlet Spec 3.0.
 * Servlets / filters and other web.xml goodies.
 * JNDI
 * JSP, JSF, EL (inlcuded, but not tested)
@@ -17,7 +16,7 @@ v1.0 is based on Jetty 8 and supports Java 1.6+ and Servlet Spec 3.0.
 What's NOT Included:
 --------------------
 
-The launcher is intentionally crippled to support a cetain simple workflow. To achieve its rapid turnaround goals, it sacrifices on many web container features:
+The launcher is intentionally crippled to support a certain simple workflow. To achieve its rapid turnaround goals, it sacrifices many web container features:
 
 * There's no support for EJBs or other heavier JEE stuff.
 * There's no servlet 3.0 annotation processing.
@@ -55,4 +54,4 @@ E.g.:
 Web application configuration (including setting the context name) can be done via "jetty-web.xml" file that is placed in "WEB-INF/" folder. Read more about the format [here](http://wiki.eclipse.org/Jetty/Reference/jetty-web.xml).
 
 Customizing the rest of the Jetty container (connector, etc.) should probably be done by forking the launcher and creating the desired configuration programmatically. "org.objectstyle.jetty.Launcher" is a small and transparent class and it should be easy to tweak to your liking.
- 
+

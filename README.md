@@ -25,7 +25,7 @@ The launcher is intentionally crippled to support a certain simple workflow. To 
 Usage
 -----
 
-* Proxy [ObjectStyle Maven Repository](http://maven.objectstyle.org/nexus/content/repositories/releases/) in your own repository manager. Or simply grab jetty-laucher.jar from there and upload it to your repo.
+* Proxy [ObjectStyle Maven Repository](http://maven.objectstyle.org/nexus/content/repositories/releases/) in your own repository manager. Or simply grab jetty-laucher.jar from there and upload it to your repo. (TODO: post to Maven central)
 
 * Add dependency on jetty-launcher to your web project, setting the scope as "provided" (i.e. you don't want jetty-laucher.jar end up in your .war during deployment):
 

@@ -1,7 +1,7 @@
 jetty-launcher
 ==============
 
-A launcher that runs a Java web app from a simple "main" method. Primarily useful in Eclipse.
+A launcher that runs a Java web app from a simple "main" method. Its primary purpose is to run Java web apps in Eclipse.
 
 What's Included
 ---------------
@@ -13,7 +13,7 @@ As it happens I care very little about JSP, JSF, EL and other common web contain
 Usage
 -----
 
-* Proxy http://maven.objectstyle.org/nexus/content/repositories/releases/ Maven repository in your repository manager. Or simply grab jetty-laucher.jar from there and upload it to your repo.
+* Proxy [ObjectStyle Maven Repository](http://maven.objectstyle.org/nexus/content/repositories/releases/) in your own repository manager. Or simply grab jetty-laucher.jar from there and upload it to your repo.
 
 * Add dependency on jetty-launcher to your web project, setting the scope as "provided" (i.e. you don't want jetty-laucher.jar end up in your .war during deployment)
 

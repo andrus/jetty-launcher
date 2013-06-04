@@ -86,8 +86,8 @@
 
 	<distributionManagement>
 		<repository>
-			<id>objectstyle-org-releases</id>
-			<url>http://maven.objectstyle.org/nexus/content/repositories/releases</url>
+			<id>oss-sonatype-releases</id>
+			<url>https://oss.sonatype.org/service/local/staging/deploy/maven2</url>
 		</repository>
 	</distributionManagement>
 </project>

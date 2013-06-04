@@ -93,12 +93,21 @@
 	</distributionManagement>
 
 	<!-- use this as -->
-	<!-- mvn release:perform -Pgpg -Dgpg.keyname=B8AF90BF -->
+	<!-- mvn release:perform -Pgpg -Darguments=-Dgpg.keyname=B8AF90BF -->
 	<profiles>
 		<profile>
 			<id>gpg</id>
 			<build>
 				<plugins>
+					<plugin>
+						<groupId>org.apache.maven.plugins</groupId>
+						<artifactId>maven-release-plugin</artifactId>
+						<version>2.2.1</version>
+						<configuration>
+							<!-- without this GPG plugin won't work -->
+							<mavenExecutorId>forked-path</mavenExecutorId>
+						</configuration>
+					</plugin>
 					<plugin>
 						<groupId>org.apache.maven.plugins</groupId>
 						<artifactId>maven-gpg-plugin</artifactId>
